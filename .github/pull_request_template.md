@@ -1,0 +1,49 @@
+## Summary
+<!--
+What does this PR do, and why?
+-->
+
+## Changelog
+<!--
+Use the template below.
+Properly described PRs self-describe new Releases.
+--->
+
+<!--
+{story-title} - {story-url}:
+### Added
+- 
+### Changed
+- 
+### Deprecated
+- 
+### Removed
+- 
+### Fixed
+- 
+### Security
+- 
+--->
+
+## Examples
+<!--
+{change-1}:
+{figure-1}
+
+{change-2}:
+{figure-2}
+--->
+
+## Testing
+<!--
+How were the changes tested? (the fit checks in the CAD, a test print, a measured part, a powered-on circuit)
+-->
+
+## Comments
+<!--
+Anything else?
+-->
+
+- [ ] An assistant helped to write these changes
+
+<!-- All pull request template files must be located in the default branch (typically main) of the repository. Only pull request template files from the default branch are used.-->
