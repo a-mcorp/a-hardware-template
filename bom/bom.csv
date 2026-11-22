@@ -1,0 +1,8 @@
+id,part,category,manufacturer,mpn,supplier,sku,qty,unit_price,unit_price_max,currency,origin,small,optional,order_date,notes
+part-1,{part-1-name},{category},{manufacturer},{mpn},{supplier},{sku},1,0.00,,EUR,ordered,,,{YYYY-MM-DD},"{notes} - ordered: the price as paid, in the shop's currency"
+part-2,{part-2-name},{category},{manufacturer},{mpn},{supplier},{sku},1,0.00,0.00,EUR,planned,,,,"{notes} - planned: an estimate, as a range from unit_price to unit_price_max"
+part-3,{part-3-name},{category},,,,,1,0,,EUR,printed,,,,{notes} - printed: its cost is in the filament
+part-4,{part-4-name},{category},{manufacturer},{mpn},,,1,0.00,,EUR,at hand,,,,"{notes} - at hand: already owned, a reference price, not counted as spent"
+part-5,{part-5-name},{category},{manufacturer},{mpn},,,1,0.00,0.00,EUR,planned,,yes,,"{notes} - optional: listed with its cost, not counted in the totals"
+part-6,{part-6-name},{category},,,,,{qty},0,,EUR,at hand,yes,,,"{where-it-goes} - small: listed under Small Parts, without cost"
+ship-1,Shipping - {supplier},shipping,,,{supplier},,1,0.00,,EUR,ordered,,,{YYYY-MM-DD},"one row per order - summed into one estimated Shipping row, per supplier"

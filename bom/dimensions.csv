@@ -1,0 +1,6 @@
+id,part,outline,details,used,source,source_url,source_notes,feature,maker,measured,verdict,verdict_notes,checked
+part-1,,{length} × {width} × {height},{details},measured,datasheet,{url},,outline,{maker-value},{measured-value},matches,{verdict-notes},{YYYY-MM-DD}
+part-1,,,{feature}: {value},drawing,datasheet,{url},,{feature},{maker-value},{measured-value},matches,,{YYYY-MM-DD}
+part-2,,{length} × {width} × {height},{details},measured,listing,,,outline,{maker-value},{measured-value},inaccurate,{why-measured},{YYYY-MM-DD}
+part-2,,,{feature}: {value},measured,,,,{feature},,{measured-value},missing,the maker gives no value,{YYYY-MM-DD}
+part-4,,{length} × {width} × {height},{details},estimate,listing,,,outline,{maker-value},,to measure,measure once it arrives,
