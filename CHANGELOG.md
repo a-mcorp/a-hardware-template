@@ -10,7 +10,6 @@ Template
 
 ### Added
 ### Changed
-- `README.md`: Features and two example screenshots in one table, like the other templates (`{example-N-title}`, `{example-N-image}`, images in `docs/`); the separate Example section was removed.
 ### Deprecated
 ### Removed
 ### Fixed

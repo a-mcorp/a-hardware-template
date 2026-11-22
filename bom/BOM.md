@@ -39,7 +39,7 @@ In mm, as length × width × height, from `bom/dimensions.csv`. These mirror the
 | {part-4-name} | {length} × {width} × {height} | {details} | estimate |
 
 ### Dimensions Validation
-Which value the CAD uses, and why, where the makers' values and the measurements differ or one of them is missing. Checked on {YYYY-MM-DD} against the datasheets and listings linked above.
+Which value the CAD uses, and why, where the makers' values and the measurements differ or one of them is missing. Checked on {YYYY-MM-DD} against the datasheets linked above and the listings named.
 
 | Part | Value | Maker | Measured | [Verdict](#legend) | Notes |
 |---|---|---|---|---|---|
@@ -56,5 +56,5 @@ Which value the CAD uses, and why, where the makers' values and the measurements
 | **Origin** | Where the part comes from: *ordered* - bought for this project; *planned* - still to buy, the cost is an estimate; *printed* - made on the printer, its cost is in the filament; *at hand* - already owned, with a generic reference price for anyone rebuilding the device, not counted as spent. |
 | **Paid** | The amount as paid, in the shop's currency, VAT included. |
 | **Cost** | In EUR, VAT included; ≈ marks an estimate or a reference price. |
-| **Source** | Where the value comes from: *datasheet* - the maker's datasheet or mechanical drawing, linked where it is published online (never stored here); *listing* - the shop's product page; *measured* - measured by hand with calipers; *estimate* - a guess, to be measured (marked `MEASURE` in the CAD). |
-| **Verdict** | How the makers' value compares with the measurement, then which one the CAD uses: *matches* - the two agree within the clearance; *inaccurate* - the maker's value is off (generic listings, slanted or hand-soldered parts, pouch tolerance), so the caliper measurement is used; *missing* - the maker gives no value, so it is measured; *no drawing* - the maker publishes no drawing at all; *to measure* - not measured yet, the maker's value is used for now. |
+| **Source** | Where the value comes from: *datasheet* - the maker's datasheet or mechanical drawing, linked where it is published online (never stored here); *listing* - the shop's product page; *measured* - measured on the part itself; *estimate* - a guess, to be measured (marked `MEASURE` in the CAD). |
+| **Verdict** | How the makers' value compares with the measurement, then which one the CAD uses: *matches* - the two agree within the clearance; *inaccurate* - the maker's value is off, so the measured value is used; *missing* - the maker gives no value, so it is measured; *no drawing* - the maker publishes no drawing at all; *to measure* - not measured yet, the maker's value is used for now. |

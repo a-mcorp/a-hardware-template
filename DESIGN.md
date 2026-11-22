@@ -6,7 +6,7 @@ Why {project-name} is built the way it is: the architecture, the decisions behin
 - 
 
 ## Decisions
-<!-- One sub-section per area (e.g. power, audio, enclosure): what was chosen, the alternatives, and why -->
+<!-- One sub-section per area (e.g. power, audio, enclosure), one point per decision: what was settled on, then a short reason -->
 ### {area}
 - 
 

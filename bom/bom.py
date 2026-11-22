@@ -32,7 +32,7 @@ dimensions.csv columns (optional file, in mm; each row goes into one table or bo
     source (datasheet | listing - for used = drawing), source_url (link to the maker's datasheet - never commit the file itself;
     shop listings are named, not linked),
     source_notes (added after the source, e.g. "PCB measured");
-    Dimensions Validation table - feature, maker (the maker's value), measured (calipers),
+    Dimensions Validation table - feature, maker (the maker's value), measured (the value measured on the part),
     verdict (matches | inaccurate | missing | no drawing | to measure), verdict_notes, checked (date)
 """
 
@@ -226,7 +226,7 @@ def table_small_build(rows_small: list[Row]) -> list[str]:
 
 
 def cell_source_format(dimension: Row, link: bool) -> str:
-    """measured - the Operator's calipers; datasheet or listing - linked; estimate - to measure."""
+    """measured or estimate as used; otherwise the source, with a link to the datasheet."""
     if dimension["used"] in ("measured", "estimate", ""):
         label = dimension["used"]
     else:
@@ -281,12 +281,12 @@ LEGEND_PARTS: list[tuple[str, str]] = [
 ]
 LEGEND_SOURCE: tuple[str, str] = (
     "Source", "Where the value comes from: *datasheet* - the maker's datasheet or mechanical drawing, linked where it is "
-    "published online (never stored here); *listing* - the shop's product page; *measured* - measured by hand with "
-    "calipers; *estimate* - a guess, to be measured (marked `MEASURE` in the CAD).")
+    "published online (never stored here); *listing* - the shop's product page; *measured* - measured on the "
+    "part itself; *estimate* - a guess, to be measured (marked `MEASURE` in the CAD).")
 LEGEND_VERDICT: tuple[str, str] = (
     "Verdict", "How the makers' value compares with the measurement, then which one the CAD uses: *matches* - the two "
-    "agree within the clearance; *inaccurate* - the maker's value is off (generic listings, slanted or hand-soldered "
-    "parts, pouch tolerance), so the caliper measurement is used; *missing* - the maker gives no value, so it is "
+    "agree within the clearance; *inaccurate* - the maker's value is off, so the measured value is "
+    "used; *missing* - the maker gives no value, so it is "
     "measured; *no drawing* - the maker publishes no drawing at all; *to measure* - not measured yet, the maker's value "
     "is used for now.")
 
@@ -383,7 +383,7 @@ def bom_generate() -> None:
             lines += [
                 "### Dimensions Validation",
                 "Which value the CAD uses, and why, where the makers' values and the measurements differ or one of them is missing."
-                + (f" Checked on {', '.join(dates)} against the datasheets and listings linked above." if dates else ""),
+                + (f" Checked on {', '.join(dates)} against the datasheets linked above and the listings named." if dates else ""),
                 "",
                 *lines_validation,
                 "",
